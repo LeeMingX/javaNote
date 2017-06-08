@@ -1,14 +1,14 @@
 ### java语言概述
 ##### 1.常用的DOS命令
-dir：列出当前目录下的文件和文件夹
-md：创建目录
-echo write_content > filename.filetype：创建文件
-rd：删除目录
-cd：进入指定目录
-cd ..：退回到上级目录
-cd \：退回到根目录
-del：删除文件
-exit：退出dos命令行
+1. dir：列出当前目录下的文件和文件夹
+2. md：创建目录
+3. echo write_content > filename.filetype：创建文件
+4. rd：删除目录
+5. cd：进入指定目录
+6. cd ..：退回到上级目录
+7. cd \：退回到根目录
+8. del：删除文件
+9. exit：退出dos命令行
 ##### 2.安装JDK并配置环境变量
 系统环境变量中的path，追加`%JAVA_HOME_PATH%\bin;%JAVA_HOME_PATH%\jre\bin`
 ##### 3.HelloWorld程序以及常见问题解答
