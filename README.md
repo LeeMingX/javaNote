@@ -4,4 +4,4 @@
 * [day1笔记](JavaSummary/day1.md)
 * [day1作业](JavaSummary/day1code.java)
 ### 基础语法
-* [day1笔记]（BasicGrammar/day1.md）
+* [day1笔记](BasicGrammar/day1.md)
