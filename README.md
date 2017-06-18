@@ -9,7 +9,14 @@
     * 关键字 & 标识符     
     * 变量      
     * 运算符     
-        1. 算术运算符       
-        2. 赋值运算符       
-        3. 比较运算符      
+        1. 算术运算符  
+* [day2笔记](BasicGrammar/day2.md)     
+    1. 赋值运算符       
+    2. 比较运算符  
+ 	3. 位运算符
+ 	4. 三元运算符
+ 	5. if-else的使用
+ 	6. switch-case的使用  
+* [day2作业-->位运算符](BasicGrammar/BitOperation.java)
+* [day2作业-->流程控制](BasicGrammar/ProcessControl.java)  
    
