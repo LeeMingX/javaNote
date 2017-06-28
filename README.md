@@ -6,17 +6,28 @@
 * [day1作业](JavaSummary/day1code.java)
 ### 基础语法
 * [day1笔记](BasicGrammar/day1.md)
-    * 关键字 & 标识符     
-    * 变量      
-    * 运算符     
-        1. 算术运算符  
+   * 关键字 & 标识符     
+   * 变量      
+   * 运算符     
+      1. 算术运算符  
 * [day2笔记](BasicGrammar/day2.md)     
-    1. 赋值运算符       
-    2. 比较运算符  
- 	3. 位运算符
- 	4. 三元运算符
- 	5. if-else的使用
- 	6. switch-case的使用  
+   * 赋值运算符
+   * 比较运算符     
+   * 位运算符     
+   * 三元运算符      
+   * if-else的使用      
+   * switch-case的使用      
 * [day2作业-->位运算符](BasicGrammar/BitOperation.java)
 * [day2作业-->流程控制](BasicGrammar/ProcessControl.java)  
-   
+* [day3笔记](BasicGrammar/day3.md)
+   * 循环结构      
+      1. for循环     
+      2. while循环     
+      3. do-while循环     
+      4. break和continue的使用      
+   * 一维数组       
+* [day3作业-->循环练习](BasicGrammar/LoopPractice.java)
+* [day4笔记](BasicGrammar/day4.md)
+   * 数组元素的默认初始值
+   * 一维数组的内存结构
+   * 多维数组
