@@ -39,3 +39,11 @@
       3. 数组的排序
 * [day4作业-->数组练习](BasicGrammar/ArrayTest.java)
 * [day5笔记](Object-OrientedProgram/day5.md)
+   * 面向对象的编程思想
+   * 创建java类并实例化类变量
+   * 类对象的内存解析
+   * java类的属性与局部变量
+   * java类的方法的使用
+   * 方法的重载
+* [day5作业-->类的建立和使用](Object-OrientedProgram/ClassTest.java)
+* [day6笔记](Object-OrientedProgram/day6.md)
