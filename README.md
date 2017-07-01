@@ -45,5 +45,12 @@
    * java类的属性与局部变量
    * java类的方法的使用
    * 方法的重载
-* [day5作业-->类的建立和使用](Object-OrientedProgram/ClassTest.java)
+* [day5作业-->类的建立和使用̃](Object-OrientedProgram/ClassTest.java)
 * [day6笔记](Object-OrientedProgram/day6.md)
+   * 匿名对象的创建和使用
+   * 可变个数形参
+   * 方法的参数传递
+   * 封装和隐藏
+      1. 权限修饰符
+   * 构造器(构造方法)
+* [day6作业-->对象的创建和使用](Object-OrientedProgram/ObjectTest.java)
