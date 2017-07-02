@@ -54,3 +54,8 @@
       1. 权限修饰符
    * 构造器(构造方法)
 * [day6作业-->对象的创建和使用](Object-OrientedProgram/ObjectTest.java)
+* [day7笔记](Object-OrientedProgram/day7.md)
+   * this关键字
+   * JavaBean
+   * import关键字
+* [day8笔记](ProClassFeature/day8.md)
