@@ -45,6 +45,8 @@
    * java类的属性与局部变量
    * java类的方法的使用
    * 方法的重载
+
+### 面向对象编程
 * [day5作业-->类的建立和使用̃](Object-OrientedProgram/ClassTest.java)
 * [day6笔记](Object-OrientedProgram/day6.md)
    * 匿名对象的创建和使用
@@ -58,4 +60,14 @@
    * this关键字
    * JavaBean
    * import关键字
+   * 面向对象的继承特性
+   * 方法的重写
+* [day7作业->继承的练习使用](Object-OrientedProgram/InheritTest.java)
+
+### 高级类特性1
 * [day8笔记](ProClassFeature/day8.md)
+   * protected修饰符
+   * super关键字
+   * 子类对象实例化的过程
+   * 面向对象的多态特性
+   * Object类中的equals()方法
