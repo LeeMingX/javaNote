@@ -71,3 +71,10 @@
    * 子类对象实例化的过程
    * 面向对象的多态特性
    * Object类中的equals()方法
+* [day9笔记](ProClassFeature/day9.md)
+   * String类的内存解析
+   * toString()方法
+   * 包装类(Wrapper)
+   * Junit的使用
+   * static关键字
+* [day9作业](ProClassFeature/BankAccount.java)

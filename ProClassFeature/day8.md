@@ -40,6 +40,11 @@ instanceof: 格式-> 对象a instanceof 类A，判断对象a是否是类A的一�
 
 ### Object类
 equals()：java.lang.Object类中的一个方法
+```
+public boolean equals(Object obj) {
+	return (this == obj)
+}
+```
 1. 只能处理引用类型变量
 2. 在Object类中equals()方法依旧比较的是两个对象的地址值是否相等
 3. 像String类、包装类、File类、Date类这些重写Object类的equals()方法，比较的是两个对象的“实体内容”是否完全相同
