@@ -77,4 +77,13 @@
    * 包装类(Wrapper)
    * Junit的使用
    * static关键字
-* [day9作业](ProClassFeature/BankAccount.java)
+* [day9作业->static的练习使用](ProClassFeature/BankAccount.java)
+* [day10笔记](ProClassFeature/day10.md)
+   * 设计模式以及单例模式的两种实现
+   * main()方法的使用
+   * 初始化块
+   * final关键字
+   * 抽象类
+   * 模版方法设计模式
+   * interface接口
+* [day10作业->单例模式的使用](ProClassFeature/SingletonTest.java)
