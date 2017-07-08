@@ -87,3 +87,12 @@
    * 模版方法设计模式
    * interface接口
 * [day10作业->单例模式的使用](ProClassFeature/SingletonTest.java)
+* [day11笔记](ProClassFeature/day11.md)
+   * 接口的多态性
+   * 接口用法总结
+   * 工厂方法
+   * 代理模式
+   * 内部类
+   * 局部内部类的通常使用方法
+   * 异常处理
+   * 如何处理异常
