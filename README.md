@@ -71,6 +71,8 @@
    * 子类对象实例化的过程
    * 面向对象的多态特性
    * Object类中的equals()方法
+
+### 高级类特性2
 * [day9笔记](ProClassFeature/day9.md)
    * String类的内存解析
    * toString()方法
@@ -96,3 +98,11 @@
    * 局部内部类的通常使用方法
    * 异常处理
    * 如何处理异常
+
+### 异常处理
+* [day12笔记](Exception/day12.md)
+   * 面向对象知识总结
+   * 声明抛出异常
+   * 自定义异常类
+* [day12作业->异常的练习](Exception/ExceptionTest.java)
+* [day12作业->编写异常代码](Exception/EcmDef.java)
