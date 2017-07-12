@@ -106,3 +106,10 @@
    * 自定义异常类
 * [day12作业->异常的练习](Exception/ExceptionTest.java)
 * [day12作业->编写异常代码](Exception/EcmDef.java)
+
+### 集合
+* [day12笔记](Collection/day13.md)
+   * 集合的概述
+   * Collection的常用方法
+   * ArrayList及List的常用方法
+   * LinkedList和Vector的简单概括
