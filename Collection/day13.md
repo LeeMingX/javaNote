@@ -79,3 +79,71 @@ ArrayList新增加的方法
 LinkedList即使用链表实现List接口，便于频繁的插入、删除操作
 Vector是线程安全的
 
+**Note:** 添加进list集合中的元素或对象所在的类一定要重写equals()方法
+
+### Set接口及其实现类
+Set中常用的方法都是Collection下定义的       
+Set中的元素存储方式：哈希算法
+
+> 当向Set中添加对象时，首先调用此对象所在类的hashCode()方法，计算此对象的哈希值，此哈希值决定了该对象在Set中的存储位置，若此位置之前没有对象存储，则这个对象直接存储到此位置，若此位置已有对象存储，再通过equals()方法比较这两个对象是否相同，如果相同，后一个对象就不能再添加进来
+
+不建议这样做：
+若hashCode()方法返回值相同，但是equals()方法比较的结果为false，那么Set中该位置可以存储这两个对象
+
+hashCode()对两个相同属性的对象计算出的hashCode值是不一致的，不能应用
+
+IDE自动生成的hashCode()方法保证了健壮性
+
+hashCode()方法要与equals()方法一致
+
+1. HashSet：主要实现类
+   1. 无序性：不代表随机性，指的是元素在底层存储的位置是无序的
+   2. 不可重复性：当向Set中添加相同的元素的时候，后添加的过程是无效的。**Note:** 要求添加进Set中的元素所在的类，一定要重写equals()和hashCode()方法
+2. LinkedHashSet
+   1. 使用链表维护了一个添加进集合中的顺序，导致当我们遍历LinkedHashSet集合元素，是按照添加进去的顺序遍历的
+   2. 依旧有存储的无序性
+   3. LinkedHashSet插入性能略低于HashSet，但在迭代访问Set里的全部元素中有最好的性能
+3. TreeSet
+   1. 向TreeSet中添加的元素必须是同一个类的
+   2. 可以按照添加进集合中的元素的指定的顺序遍历。String、包装类等默认按照从小到大的顺序遍历
+   3. 向TreeSet中添加自定义类的对象，有两种排序方法
+      * 自然排序：要求自定义类实现java.lang.Comparable接口并重写其compareTo(Object o)方法，此方法中可以自定义类的哪个属性进行排序。向TreeSet中添加元素时，首先按照compareTo()方法进行比较，一旦返回0，虽然仅是两个对象的此属性值相同，但是程序会认为这两个对象相同，进而后一个对象不能添加进去
+      ```
+	  //当自定义类没有实现Comparable接口时，该类的实例化对象不能添加到TreeSet中
+	  //向TreeSet中添加Person类的对象时，依据compareTo()方法，确定根据哪个属性排列
+	  class Person {
+	  	private String name;
+	  	private int age;
+
+	  	@Override
+	  	public int compareTo(Object o) {
+	  		if (o instanceof Person) {
+	  			Person p = (Person) o;
+	  			return this.name.compareTo(p.name);
+	  		}
+	  		return 0;
+	  	}
+	  }
+      ```
+      * 定制排序
+      ```
+      //创建一个实现了Comparator接口的类对象
+      Comparator com = new Comparator() {
+      	//向TreeSet中添加自定类的对象，在此compare()方法中，指明是按照自定类的哪个属性排序的
+      	@Override
+      	public int compare(Object o1, Object o2) {
+      		if (o1 instanceof Customer && o2 instanceof Customer) {
+      			Customer c1 = (Customer) o1;
+      			Customer c2 = (Customer) o2;
+      			return c1.getId().compareTo(c2.getId());
+      		}
+      		return 0;
+      	}
+      }
+
+      //将此对象作为形参传递给TreeSet的构造器中
+      TreeSet set = new TreeSet(com);
+      //向TreeSet中添加Comparator接口中的compare方法中涉及的类的对象
+      ```
+
+**Note:** compareTo()方法与hashCode()方法以及equals()方法三者保持一致
