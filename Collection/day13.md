@@ -147,3 +147,89 @@ hashCode()方法要与equals()方法一致
       ```
 
 **Note:** compareTo()方法与hashCode()方法以及equals()方法三者保持一致
+
+### Map接口
+1. HashMap：Map的主要实现类
+2. LinkedHashMap：使用链表维护添加进Map的顺序，遍历时按照添加的顺序
+3. TreeMap：按照添加进Map中的元素的key的指定属性进行排序
+   * 自然排序
+   * 订制排序
+4. Hashtable：线程安全，不允许key与value存储null值
+   * Properties：常用来处理属性文件，键🈴️值都为String类型
+
+Map中的主要方法：
+```
+//向Map中添加一个元素
+Object put(Object key, Object value)
+//按照指定的key删除此key-value
+Object remove(Object key)
+//将一个新的Map中所有值添加进此Map中
+void putAll(Map t)
+//清空
+void clear()
+//获取指定key的value值
+Object get(Object key)
+boolean containsKey(Object key)
+boolean containsValue(Object value)
+//返回集合的长度
+int size()
+boolean isEmpty()
+boolean equals(Object obj)
+```
+**Note:** HashMap：key是用Set来存放的，不可重复，value是用Collection来存放的，可重复
+一个Key-Value对是一个Entry，所有的Entry是用Set存放的，也是不可重复的
+向HashMap中添加元素时，会调用key所在类的equals()方法，判断两个key是否相同，若相同，则只能够添加进后一个元素
+
+##### 如何遍历Map
+```
+//遍历所有key
+Set keySet()
+//遍历所有的value
+Collection values()
+//遍历key-value对
+Set entrySet()
+
+Set set = Map.entrySet();
+for (Object obj : set) {
+	Map.Entry entry = (Map.Entry) obj;
+	System.out.println(entry.getKey() + " " + entry.getValue());
+}
+```
+
+##### 操作集合的工具类：Collections
+主要方法：
+```
+//以下方法均为static的
+//反转list集合中元素的顺序
+reverse(List) 
+//对list集合元素进行随机排序
+shuffle(List)
+//根据元素的自然顺序对指定list集合元素按升序排列
+sort(List)
+//根据指定的Comparator产生的顺序对List集合元素进行排序
+sort(List, Comparator)
+//将指定List集合中i处元素和j处元素进行交换
+swap(List, int, int)
+
+//根据元素的自然顺序，返回集合中的最大元素
+Object max(Collection)
+//根据Comparator指定的顺序，返回集合中的最大元素
+Object max(Collection, Comparator)
+Object min(Collection)
+Object max(Collection, Comparator)
+//返回指定集合中指定元素的出现次数
+int frequency(Collection object) 
+//将src中的内容复制到dest中
+void copy(List dest, List src)
+//使用新值替换list中对应的旧值
+boolean replaceAll(List list, Object oldVal, Object newVal)
+
+//还有一些同步方法使得list转变为线程安全的
+```
+
+##### Enumeration接口
+Enumeration接口是Iterator接口的“古老版本”
+
+包含两个方法：
+hasMoreElements() -> hasNext()     
+nextElement -> next()

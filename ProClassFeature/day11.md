@@ -135,7 +135,7 @@ public class TestInnerClass() {
 		Person.Dog = new Person.Dog();
 		//创建非静态内部类对象
 		Person p = new Person();
-		Person.Bird.b = p.new.Bird();
+		Person.Bird b = p.new Bird();
 
 		b.setName("small small boom");
 	}
