@@ -12,7 +12,7 @@ java集合包括Collection和Map两种体系：
    * List 元素有序，可重复的集合 “动态”数组
       1. ArrayList(主要的实现类)、LinkedList、Vector
 2. Map接口：具有映射关系的“key-value”的集合 类似于“函数”
-   * HashMap、LinkedHashMap、TreeMap、HashTable(子类-Properties)
+   * HashMap、LinkedHashMap、TreeMap、Hashtable(子类-Properties)
 
 ##### Collection的常用方法
 ```
@@ -103,6 +103,7 @@ hashCode()方法要与equals()方法一致
    1. 使用链表维护了一个添加进集合中的顺序，导致当我们遍历LinkedHashSet集合元素，是按照添加进去的顺序遍历的
    2. 依旧有存储的无序性
    3. LinkedHashSet插入性能略低于HashSet，但在迭代访问Set里的全部元素中有最好的性能
+   4. 较少的插入和删除操作
 3. TreeSet
    1. 向TreeSet中添加的元素必须是同一个类的
    2. 可以按照添加进集合中的元素的指定的顺序遍历。String、包装类等默认按照从小到大的顺序遍历
@@ -153,9 +154,9 @@ hashCode()方法要与equals()方法一致
 2. LinkedHashMap：使用链表维护添加进Map的顺序，遍历时按照添加的顺序
 3. TreeMap：按照添加进Map中的元素的key的指定属性进行排序
    * 自然排序
-   * 订制排序
+   * 订制排序：将Comparator作为形参放入TreeMap的构造类
 4. Hashtable：线程安全，不允许key与value存储null值
-   * Properties：常用来处理属性文件，键🈴️值都为String类型
+   * Properties：常用来处理属性文件，键和值都为String类型
 
 Map中的主要方法：
 ```

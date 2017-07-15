@@ -1,5 +1,6 @@
 # javaNote
 培训准备工作，代码，笔记
+##Java SE语法
 ### Java语言概述
 * [day1笔记](JavaSummary/day1.md)    
     * java语言概述
@@ -118,3 +119,16 @@
    * 遍历Map
    * 操作集合的工具类：Collections
    * Enumeration接口
+
+### 泛型
+* [day14笔记](Generic/day14.md)
+   * 泛型的使用
+   * 自定义泛型类
+   * 泛型与继承的关系
+   * 通配符
+
+### 枚举和注解
+* [day14笔记](EnumAndAnnotation/day14.md)
+   * 自定义一个枚举类
+   * 使用enum关键字定义枚举类
+   * 注解的简单说明
