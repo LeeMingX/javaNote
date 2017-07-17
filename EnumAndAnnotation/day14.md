@@ -1,4 +1,5 @@
 ### 枚举类
+枚举类：类的对象是有限个，确定的      
 自定义一个枚举类
 ```
 class Season {
@@ -56,6 +57,8 @@ public @interface Annotation {
 3. 元注解：修饰注解的注解
    * @Retention(RetentionPolicy.CLASS/RUNTIME/SOURCE)：用于指定该注解存在的周期
    * @Target：指定被修饰的Annotation能用于修饰哪些程序元素
+   * @Documented：能否被javadoc解析
+   * @Inherited：注解是否具有继承性
 
 
 
