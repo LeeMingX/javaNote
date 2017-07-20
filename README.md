@@ -152,3 +152,14 @@
    * 对象流
    * 对象的序列化机制
    * RandomAccessFile类
+
+### 多线程
+* [day16笔记](MultiThread/day16.md)
+   * 多线程涉及到的主要方法
+   * 线程的同步机制
+   * 死锁问题
+   * 线程通信
+
+### Java常用类
+* [day17笔记](JavaClass/day17.md)
+   * Java常用类
