@@ -155,11 +155,18 @@
 
 ### 多线程
 * [day16笔记](MultiThread/day16.md)
+   * 线程的介绍
+   * 线程的状态
+   * 线程中的概念和属性
    * 多线程涉及到的主要方法
    * 线程的同步机制
    * 死锁问题
    * 线程通信
+   * 锁对象
+   * 条件对象
 
 ### Java常用类
 * [day17笔记](JavaClass/day17.md)
-   * Java常用类
+   * String类
+   * StringBuffer类
+   * StringBuilder类

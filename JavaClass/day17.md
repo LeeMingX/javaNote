@@ -1,6 +1,6 @@
 ### Java常用类
 
-1. String：代表不可变的字符序列，底层使用char[]存放
+##### String：代表不可变的字符序列，底层使用char[]存放
 
 String类是final修饰的
 
@@ -22,3 +22,42 @@ String类是final修饰的
 判断是否以suffix结尾
 11. public boolean regionMatches(int firstStart, String other, int otherStart, int length);other字符串在otherstart位置后长度为length的字串与原字符串在firststart位置后的length长度的字串是否相同
 
+##### StringBuffer   
+线程安全的可变的字符序列，可以对字符串内容进行增删
+
+常用方法：
+* 添加 append()
+```
+StringBuffer append(String s) 
+StringBuffer append(int n) 
+StringBuffer append(Object o) 
+StringBuffer append(char n) 
+StringBuffer append(long n) 
+StringBuffer append(boolean n) 
+```
+* 插入 insert(int index, String str)      
+`StringBuffer insert(int index, String str)`
+
+* 反转 reverse() 反转该StringBuffer对象本身     
+`public StringBuffer reverse()`
+
+* 删除    
+`StringBuffer delete(int startIndex, int endIndex)`
+
+* 查询指定索引位置的字符      
+`public char charAt(int n)` 
+
+* 修改单个字符      
+`public void setCharAt(int n, char ch)`
+* 修改多个字符     
+`StringBuffer replace(int startIndex, int endIndex, String str)`
+
+以下方法类似String对象
+```
+public int indexOf(String str)
+public String substring(int start, int end)
+public int length() 
+```
+
+##### StringBuilder 
+可变的字符序列，线程不安全的，方法效率高于StringBuffer
