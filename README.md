@@ -164,6 +164,11 @@
    * 线程通信
    * 锁对象
    * 条件对象
+   * synchronized关键字
+   * 同步阻塞
+   * Volatile域
+   * final变量
+   * 读/写锁
 
 ### Java常用类
 * [day17笔记](JavaClass/day17.md)

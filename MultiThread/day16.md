@@ -12,6 +12,8 @@
    1. run方法正常退出而自然死亡
    2. 因为一个没有捕获的异常终止了run方法而意外死亡
 
+![线程状态转换](photo/ThreadStateTransfer.png)
+
 调用getState()方法可以确定当前线程的状态
 
 具有多个处理器的机器上每个处理器运行一个线程，可以有多个线程并行运行，如果线程的数目多于处理器的数目，调度器采用时间片机制
@@ -90,7 +92,7 @@ synchronized(对象／同步监视器) {
 2. 同步监视器(锁／this)，由一个类的对象来充当，获取此监视器的线程执行代码块中的代码，this表示当前对象。继承的方式中要慎用this
 
 方式二：同步方法      
-将操作共享数据的方法声明为synchronized，即此方法为同步方法，能够保证当其中一个线程执行此方法时，其它线程等待至此线程执行完此方法。同步方法的锁：this
+将操作共享数据的方法声明为synchronized，即此方法为同步方法，能够保证当其中一个线程执行此方法时，其它线程等待至此线程执行完此方 法。同步方法的锁：this
 
 线程同步的弊端：由于同一时期内只能有一个线程访问共享数据，效率变低
 
@@ -133,4 +135,73 @@ Condition sufficientFunds(变量名为要判断的条件)
 Constructor {
    sufficientFunds = bankLock.new Condition();
 }
+
+//对await的调用应该在如下形式的循环体中
+while(!(ok to proceed))
+   condition.await();
+
+//将该线程放到条件的等待集中
+void await()
+//解除该条件的等待集中的所有线程的阻塞状态
+void signalAll()
+//从该条件的等待集中随机选择一个线程，解除其阻塞状态
+void signal()
 ```
+
+锁和条件的关键之处：
+1. 锁用来保护代码片段，任何时刻只能有一个线程执行被保护的代码
+2. 锁可以管理试图进入被保护代码段的线程
+3. 锁可以拥有一个或多个相关的条件对象
+4. 每个条件对象管理已经进入被保护的代码块但是还不能执行的代码
+
+##### synchronized关键字
+从1.0版本开始，Java中的每一个对象都有一个内部锁，如果一个方法用synchronized关键字声明，那么对象的锁会保护整个方法。要调用该方法，线程必须获得内部的对象锁。内部锁只有一个相关条件。wait()方法添加一个线程到等待集中，notifyAll(/notify()方法解除等待线程的阻塞状态
+```
+public synchronized void method() {
+   while(condition) 
+      wait();
+
+   identical statement;
+
+   notifyAll();
+}
+```
+理解的关键点：每一个对象有一个内部锁，并且该锁有一个内部条件。由锁来管理试图进入synchronized方法的线程，由条件来管理那些调用wait的线程
+
+**Note：** 将静态方法声明为synchronized也是合法的，调用这种方法时，该方法获得相关的类对象的内部锁。没有其他线程可以调用同一个类的这个或任何其他的同步
+
+##### 同步阻塞
+```
+synchronized (lock) {
+   statements...
+}
+```
+
+##### Volatile域
+volatile关键字为实例域的同步访问提供了一种免锁机制。如果声明一个域为volatile，那么编译器和虚拟机就知道该域是可能被另一个线程并发更新的。
+
+##### final变量
+当域声明为final时，可以安全地访问这个共享域
+
+##### 读/写锁
+```
+//构造一个ReentrantReadWriteLock对象
+private ReentrantReadWriteLock rwl = new ReentrantReadWriteLock()
+//抽取读锁和写锁
+private Lock readLock = rwl.readLock();
+private Lock writeLock = rwl.writeLock();
+//对所有获取方法上读锁
+public double getTotal() {
+   readLock.lock();
+   try {...}
+   finally { readLock.unlock() }
+}
+//对所有修改方法上写锁
+public void transfer(,,,) {
+   writeLock.lock();
+   try {...}
+   finally { writeLock.unlock() }
+}
+```
+读锁：可以被多个读操作共用的读锁，会排斥所有写操作    
+写锁：排斥所有其他的读操作和写操作
