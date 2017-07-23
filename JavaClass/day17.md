@@ -61,3 +61,37 @@ public int length()
 
 ##### StringBuilder 
 可变的字符序列，线程不安全的，方法效率高于StringBuffer
+
+### 日期类
+1. java.lang.System类提供的public static long currentTimeMills()，返回当前时间与1970年1月1日0时0分0秒之间以毫秒为单位的时间差
+2. java.util.Date类表示特定的瞬间，精准到秒。其子类java.sql.Date的格式为年-月-日，构造器传入一个long型整数
+   * Date.getTime()返回一个long型整数
+3. SimpleDateFormat类易于国际化
+   * 格式化：日期->文本，使用SimpleDateFormat的format()方法
+   * 解析：文本->日期，使用
+4. Calendar类：抽象基类，使用Calendat.getInstance()方法获得其实例。处理具体日期中的某个部分。
+
+##### BigInteger和BigDecimal
+构造器
+```java
+public BigInteger(String str)
+
+public BigDecimal(double val)
+public BigDecimal(String val)
+```
+常用方法
+```java
+public BigInteger abs()
+public BigInteger add(BigInteger val)
+public BigInteger subtract(BigInteger val)
+public BigInteger multiply(BigInteger val)
+public BigInteger divide(BigInteger val)
+public BigInteger remainder(BigInteger val)
+public BigInteger pow(int exponent)
+public BigInteger[] divideAndRemainder(BigInteger val)
+
+public BigDecimal add(BigDecimal augend)
+public BigDecimal subtract(BigDecimal subtrahend)
+public BigDecimal multiply(BigDecimal multiolicend)
+public BigDecimal divide(BigDecimal divisor, int scale, int roundingMode)
+```

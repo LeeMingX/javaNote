@@ -1,5 +1,6 @@
 # javaNote
-培训准备工作，代码，笔记
+培训准备工作，代码，笔记      
+除了Java se语法之外，也有JVM的一些知识
 ##Java SE语法
 ### Java语言概述
 * [day1笔记](JavaSummary/day1.md)    
@@ -175,3 +176,10 @@
    * String类
    * StringBuffer类
    * StringBuilder类
+   * 日期类
+   * BigInteger和BigDecimal
+
+## JVM学习笔记
+学习JVM的一些笔记，心得
+### JVM的内存模型
+* [有关内存的初步了解](JVMBasis/JVMEncounter.md)
