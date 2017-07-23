@@ -179,6 +179,15 @@
    * 日期类
    * BigInteger和BigDecimal
 
+### 反射机制
+* [day18笔记](Reflect/day18.md)
+   * Java反射机制概述
+   * Class类
+   * 类加载器ClassLoader
+   * 通过反射获取类的完整结构
+   * 调用指定的属性、方法以及构造器
+   * 动态代理
+
 ## JVM学习笔记
 学习JVM的一些笔记，心得
 ### JVM的内存模型
