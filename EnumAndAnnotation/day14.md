@@ -59,10 +59,3 @@ public @interface Annotation {
    * @Target：指定被修饰的Annotation能用于修饰哪些程序元素
    * @Documented：能否被javadoc解析
    * @Inherited：注解是否具有继承性
-
-
-
-
-
-
-```
